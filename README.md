@@ -40,7 +40,6 @@ I use netbeans with Java EE Support as IDE.
 - [ ] Chat Page 
 - [ ] Search Result Page
 - [ ] About Us Page 
-
 * Logic
 - [ ] MVC Controller 
 - [ ] Register 
@@ -48,7 +47,6 @@ I use netbeans with Java EE Support as IDE.
 - [ ] Search
 - [ ] Chat 
 - [ ] Index (Recent audiobooks, Top rated audiobooks)
-
 * Entities 
 - [ ] publisher 
 - [ ] speaker 
