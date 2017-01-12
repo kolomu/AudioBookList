@@ -85,6 +85,16 @@ footer a:hover {
     color: rgba(255,255,255, 1);
 }
 
+
 /* *****************************************************************
-MEDIA QUERY
+LOGIN PAGE
 ****************************************************************** */
+div.row form div.row.column.log-in-form {
+  border: 1px solid #1779BA;
+  background-color: #FFFFFF;
+  padding:1rem;
+}
+
+.log-in-form h4 {
+    font-size: 1.3em;
+}
