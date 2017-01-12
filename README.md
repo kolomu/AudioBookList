@@ -1,19 +1,33 @@
 # AudioBookList
 
 # Introduction #
-AudioBookList shall become a Website where you can add audiobooks to your personal list. Also you can write and read reviews about audiobooks.
+AudioBookList shall become a website where you can add audiobooks to your personal list. 
+
+Also you can write and read reviews about audiobooks.
+
 It also should be possible to send messages to members. 
 
 # Technologies Used #
 Database: MySQL
+
 Backend Logic: Java Servlets / Java Server Pages
+
+
 Front End: HTML, CSS and JavaScript (Framework used Zurb Foundation 6)
+
+
 Server: Apache Tomcat 8 or Glassfish
+
+
 Java Persistance Api (JPA): EclipseLink
 
 # How to get it up and running #
 Database: install MySQL and execute the 'audiobooksql.sql' file.
-Generel Project: import the 'audiobooksql' project. I use as IDE netbeans with Java EE Support. 
+
+
+Generel Project: import the 'audiobooksql' project. 
+
+I use as IDE netbeans with Java EE Support. 
 
 # Still needs to be done #
 * Pages 
