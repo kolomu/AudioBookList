@@ -9,10 +9,35 @@ body {
 }
 
 /* *****************************************************************
+NAVBAR DESKTOP
+****************************************************************** */
+.nav-desktop{
+    color: #FFFFFF;
+}
+
+.top-bar {
+    background-color: #000;
+}
+
+.top-bar ul{
+    background-color: #000;
+}
+
+.menu > li > a {
+    color: rgba(255,255,255,0.7);
+}
+
+.menu > li > a:hover {
+    color: rgba(255,255,255,1);
+}
+
+
+/* *****************************************************************
 HERO
 ****************************************************************** */
 .hero {
     background-color: #005ca9;
+    background-image: url("../img/square_bg.png");
     color: #FFFFFF;
     padding: 40px 0;
 }
@@ -43,9 +68,23 @@ FOOTER
 footer {
     background-color: black;
     padding: 40px 0;
-    color: white;
+    color: rgba(255,255,255, 0.9);
+    background-image: url("../img/footer_lodyas.png");
 }
 
+footer hr {
+    border-color: rgba(255,255,255,0.5);
+    margin: 10px 0;
+}
 footer a {
     display: block;
+    color: rgba(255,255,255, 0.7);
 }
+
+footer a:hover {
+    color: rgba(255,255,255, 1);
+}
+
+/* *****************************************************************
+MEDIA QUERY
+****************************************************************** */
