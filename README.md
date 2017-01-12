@@ -32,31 +32,31 @@ I use netbeans with Java EE Support as IDE.
 # Task List #
 * Pages 
 - [x] Login Page 
- * Register Page 
- * Index (Logged in view)
- * Audiobook Page
- * Review Page 
- * My AudioBook List Page 
- * Chat Page 
- * Search Result Page
- * About Us Page 
+- [ ] Register Page 
+- [ ] Index (Logged in view)
+- [ ] Audiobook Page
+- [ ] Review Page 
+- [ ] My AudioBook List Page 
+- [ ] Chat Page 
+- [ ] Search Result Page
+- [ ] About Us Page 
 
 * Logic
-  * MVC Controller 
-  * Register 
-  * Review
-  * Search
-  * Chat 
-  * Index (Recent audiobooks, Top rated audiobooks)
+- [ ] MVC Controller 
+- [ ] Register 
+- [ ] Review
+- [ ] Search
+- [ ] Chat 
+- [ ] Index (Recent audiobooks, Top rated audiobooks)
 
 * Entities 
-  * publisher 
-  * speaker 
-  * lang
-  * person 
-  * friends 
-  * chatentry 
-  * category 
-  * author 
-  * audiobook 
-  * review
+- [ ] publisher 
+- [ ] speaker 
+- [ ] lang
+- [ ] person 
+- [ ] friends 
+- [ ] chatentry 
+- [ ] category 
+- [ ] author 
+- [ ] audiobook 
+- [ ] review
