@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Audio Book List</title>
+        <title>Register - Audio Book List</title>
         <meta charset="UTF-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
                     <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
                         <button class="menu-icon" type="button" data-toggle></button>
                     </span>
-                    <strong>Audio Book List</strong>
+                    <strong><a href="index.html">Audio Book List</a></strong>
                 </div>
                 <div id="responsive-menu">
                     <div class="top-bar-left">
@@ -48,63 +48,41 @@
                     </div>
                     <div class="top-bar-right">
                         <ul class="menu">
-                            <li><a href="register.html">Register</a></li>
-                            <li><a href="login.html">Sign In</a></li>
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">Sign In</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <div class="wrap">
-                <h1>AudioBooksList - Save your AudioBooks </h1>
-                <h2>Features:</h2>
-                <ul class="square">
-                    <li>Save your favorite audiobooks in a list</li>
-                    <li>Write reviews about interesting titles</li>
-                    <li>Learn more about new audiobooks</li>
-                    <li>Chat with other people</li>
-                </ul>
-            </div>
-        </section>
-
         <!-- MAIN CONTENT -->
         <section class="main">
-            <div class="wrap">
-                <div class="row">
-                    <h2>Top Rated Audiobooks</h2>
-                    <hr>
-                    <div class="audiobookBox large-4 medium-4 columns" >
-                        <img src="img/img1.jpg" alt="The Whistler" />
-                        <h3 class="text-center">The Whistler</h3>
-                    </div>
-                    <div class="audiobookBox large-4 medium-4 columns">
-                        <img src="img/img1.jpg" alt="Two by Two" />
-                        <h3 class="text-center">Two by Two</h3>
-                    </div>
-                    <div class="audiobookBox large-4 medium-4 columns">
-                        <img src="img/img1.jpg" alt="Small Great Things: A Novel" />
-                        <h3 class="text-center">Small Great Things: A Novel</h3>
-                    </div>
-                </div>
+            <div class="row">
+                <div class="medium-6 medium-centered large-4 large-centered columns">
 
-                <div class="row">
-                    <h2>Recent Audio Books</h2>
-                    <hr>
-                    <div class="audiobookBox large-4 medium-4 columns" >
-                        <img src="img/img1.jpg" alt="The Chemist" />
-                        <h3 class="text-center">The Chemist</h3>
-                    </div>
-                    <div class="audiobookBox large-4 medium-4 columns">
-                        <img src="img/img1.jpg" alt="Catalyst (Star Wars): A Rogue One Novel" />
-                        <h3 class="text-center">Catalyst (Star Wars): A Rogue One Novel</h3>
-                    </div>
-                    <div class="audiobookBox large-4 medium-4 columns">
-                        <img src="img/img1.jpg" alt="A Gentleman in Moscow: A Novel" />
-                        <h3 class="text-center">A Gentleman in Moscow: A Novel</h3>
-                    </div>
+                    <form>
+                        <div class="row column register-form">
+                            <h4 class="text-center">Register</h4>
+                            <label>Username
+                                <input type="text" placeholder="John">
+                            </label>
+                            <p class="help-text" id="usernameHelpText">Spaces are ignored in usernames</p>
+                            <label>Password
+                                <input type="text" placeholder="Password">
+                            </label>
+                            <p class="help-text" id="passwordHelpText">Password must have at least 6 characters</p>
+                            <label>Email
+                                <input type="email" placeholder="john@mail.com">
+                            </label>
+
+                            <fieldset>
+                                <input id="termsofuse" type="checkbox"><label for="termsofuse">I agree with the <a href="#">Terms Of Use</a></label>
+                            </fieldset>
+                            <p><button type="submit" class="button expanded">Register</button></p>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </section>
@@ -114,8 +92,8 @@
             <div class="wrap row small-up 1 medium-up-3">
                 <div class="column">
                     <h4>Contact Info</h4>
-                <hr>
-                <a href="#"><span>Email:</span>samplemail@mail.com</a>
+                    <hr>
+                    <a href="#"><span>Email:</span>samplemail@mail.com</a>
                 </div>
                 <div class="column">
                     <h4>Site Map</h4>

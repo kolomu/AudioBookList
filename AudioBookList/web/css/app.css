@@ -31,7 +31,13 @@ NAVBAR DESKTOP
     color: rgba(255,255,255,1);
 }
 
+div.top-bar-title strong a{
+    color: white;
+}
 
+.top-bar-title a:hover,.top-bar-title a:focus{
+    color: white;
+}
 /* *****************************************************************
 HERO
 ****************************************************************** */
@@ -97,4 +103,13 @@ div.row form div.row.column.log-in-form {
 
 .log-in-form h4 {
     font-size: 1.3em;
+}
+
+/* *****************************************************************
+REGISTER PAGE
+****************************************************************** */
+div.row form div.row.column.register-form {
+  border: 1px solid #1779BA;
+  background-color: #FFFFFF;
+  padding: 1rem;
 }
