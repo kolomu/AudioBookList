@@ -41,7 +41,7 @@ I use netbeans with Java EE Support as IDE.
 - [ ] Search Result Page
 - [ ] About Us Page 
 * Logic
-- [ ] MVC Controller 
+- [x] MVC Controller 
 - [ ] Register 
 - [ ] Review
 - [ ] Search
