@@ -32,7 +32,7 @@ I use netbeans with Java EE Support as IDE.
 # Task List #
 * Pages 
 - [x] Login Page 
-- [ ] Register Page 
+- [x] Register Page 
 - [ ] Index (Logged in view)
 - [ ] Audiobook Page
 - [ ] Review Page 
