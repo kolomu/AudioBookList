@@ -24,19 +24,19 @@
                         <div class="row column register-form">
                             <h4 class="text-center">Register</h4>
                             <label>Username
-                                <input type="text" placeholder="John">
+                                <input type="text" name="username" placeholder="John">
                             </label>
                             <p class="help-text" id="usernameHelpText">Spaces are ignored in usernames</p>
                             <label>Password
-                                <input type="text" placeholder="Password">
+                                <input type="text" name="password" placeholder="Password">
                             </label>
                             <p class="help-text" id="passwordHelpText">Password must have at least 6 characters</p>
                             <label>Email
-                                <input type="email" placeholder="john@mail.com">
+                                <input type="email" name="email" placeholder="john@mail.com">
                             </label>
 
                             <fieldset>
-                                <input id="termsofuse" type="checkbox"><label for="termsofuse">I agree with the <a href="#">Terms Of Use</a></label>
+                                <input id="termsofuse" name="termsofuse" type="checkbox"><label for="termsofuse">I agree with the <a href="#">Terms Of Use</a></label>
                             </fieldset>
                             <p><button type="submit" class="button expanded">Register</button></p>
                         </div>

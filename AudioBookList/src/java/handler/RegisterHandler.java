@@ -17,8 +17,8 @@ public class RegisterHandler extends EventHandlerBase {
     
     @Override
     protected String getURL() {
-        if (hasErrors) return "/register.jsp";
-        else return "overview.jsp";
+        if (hasErrors) return "/pages/register.jsp";
+        else return "/pages/overview.jsp";
     }
     
     @Override
@@ -42,6 +42,7 @@ public class RegisterHandler extends EventHandlerBase {
 		// check Data
                 // USERNAME
                 if(StringUtils.isNullOrEmpty(username)){
+                    System.out.println("FEHLER!: " + username);
                    errorMessages.put("username" , "Username is missing"); 
                 }else {
                    person.setUsername(username);
@@ -74,6 +75,8 @@ public class RegisterHandler extends EventHandlerBase {
 		hasErrors = !errorMessages.isEmpty();
 		
 		if (!hasErrors) {
+                        person.setId((long)0);
+                        person.setPicture("no picture");
 			dao.create(person);
 			request.setAttribute("user", person);	
 		} else {		
