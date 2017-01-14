@@ -19,7 +19,7 @@ Front End: HTML, CSS and JavaScript (Framework used Zurb Foundation 6)
 Server: Apache Tomcat 8 or Glassfish
 
 
-Java Persistance Api (JPA): EclipseLink
+Java Persistance Api (JPA): EclipseLink (2.6.4)
 
 ## How to get it up and running ##
 Database: install MySQL and execute the 'audiobooksql.sql' file.
