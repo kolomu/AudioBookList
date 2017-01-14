@@ -14,7 +14,7 @@ public class PersonDao extends AbstractJpaDao<Person> {
        Person person = null;
        createManager();
        person = (Person) em.createQuery("SELECT p FROM Person p WHERE p.username LIKE :username")
-               .setParameter("userName", username).getSingleResult();
+               .setParameter("username", username).getSingleResult();
        closeManager();
        return person;
     }
