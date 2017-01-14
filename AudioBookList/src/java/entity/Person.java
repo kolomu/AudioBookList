@@ -20,7 +20,7 @@ public class Person implements Serializable {
     public Person() {
     }
 
-    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
 
@@ -30,7 +30,7 @@ public class Person implements Serializable {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "password")
+    @Column(name = "username")
     private String password;
 
     @Column(name = "picture")
@@ -44,7 +44,7 @@ public class Person implements Serializable {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId() {
         this.id = id;
     }
 
