@@ -92,6 +92,8 @@ public class Person implements Serializable {
         username = "";
         email = "";
         password = "";
+        active = Active.T;
+        picture = "";
     }
 
     @Override
