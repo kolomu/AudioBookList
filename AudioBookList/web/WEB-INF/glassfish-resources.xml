@@ -10,5 +10,5 @@
         <property name="URL" value="jdbc:mysql://localhost:3306/audiobooklist?zeroDateTimeBehavior=convertToNull"/>
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
     </jdbc-connection-pool>
-    <jdbc-resource enabled="true" jndi-name="java:app/audibookds" object-type="user" pool-name="mysql_audiobooklist_rootPool"/>
+    <jdbc-resource enabled="true" jndi-name="java:app/audiobooklist_jndi" object-type="user" pool-name="mysql_audiobooklist_rootPool"/>
 </resources>
