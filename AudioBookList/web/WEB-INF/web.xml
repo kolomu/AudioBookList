@@ -3,6 +3,10 @@
     <servlet>
         <servlet-name>MvcController</servlet-name>
         <servlet-class>controller.MvcController</servlet-class>
+        <init-param>
+            <param-name>register</param-name>
+            <param-value>handler.RegisterHandler</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>MvcController</servlet-name>
