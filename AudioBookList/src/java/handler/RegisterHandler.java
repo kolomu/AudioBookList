@@ -17,8 +17,8 @@ public class RegisterHandler extends EventHandlerBase {
     
     @Override
     protected String getURL() {
-        if (hasErrors) return "/register.jsp";
-        else return "overview.jsp";
+        if (hasErrors) return "/pages/register.jsp";
+        else return "/pages/overview.jsp";
     }
     
     @Override
