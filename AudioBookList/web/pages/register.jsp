@@ -17,7 +17,10 @@
             <div class="row">
                 <div class="medium-6 medium-centered large-4 large-centered columns">
 
-                    <form>
+                    <form action="<%=request.getContextPath()%>/MvcController" method="POST">
+                        
+                        <input type="hidden" name="event" value="register" />
+                        
                         <div class="row column register-form">
                             <h4 class="text-center">Register</h4>
                             <label>Username
