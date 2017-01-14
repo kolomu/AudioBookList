@@ -11,7 +11,7 @@ public abstract class AbstractJpaDao<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private static final EntityManagerFactory EMF = Persistence.createEntityManagerFactory("AudioBookList");
+    private static final EntityManagerFactory EMF = Persistence.createEntityManagerFactory("AudioBookListPU");
     protected Class<T> clazz;
     protected EntityManager em;
 
