@@ -16,7 +16,7 @@ Backend Logic: Java Servlets / Java Server Pages
 Front End: HTML, CSS and JavaScript (Framework used Zurb Foundation 6)
 
 
-Server: Apache Tomcat 8 or Glassfish
+Server: Apache Tomcat 9
 
 
 Java Persistance Api (JPA): EclipseLink (2.6.4)
@@ -42,7 +42,7 @@ I use netbeans with Java EE Support as IDE.
 - [ ] About Us Page 
 * Logic
 - [x] MVC Controller 
-- [ ] Register 
+- [ ] Register
 - [ ] Review
 - [ ] Search
 - [ ] Chat 
