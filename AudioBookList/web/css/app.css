@@ -113,3 +113,9 @@ div.row form div.row.column.register-form {
   background-color: #FFFFFF;
   padding: 1rem;
 }
+
+.errorMessage {
+    white-space: nowrap;
+    color: red;
+    font-size: 0.8em;
+}
