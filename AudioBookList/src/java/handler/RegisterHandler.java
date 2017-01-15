@@ -25,7 +25,7 @@ public class RegisterHandler extends EventHandlerBase {
    public void process(ServletContext sc, HttpServletRequest request, HttpServletResponse response)
 			throws Exception, ServletException, IOException {
 
-		HashMap<String, String> errorMessages = new HashMap<String, String>();
+		HashMap<String, String> errorMessages = new HashMap<>();
 
 		PersonDao dao = new PersonDao();
 		Person person = new Person();
