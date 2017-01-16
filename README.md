@@ -42,7 +42,9 @@ I use netbeans with Java EE Support as IDE.
 - [ ] About Us Page 
 * Logic
 - [x] MVC Controller 
-- [ ] Register
+- [x] Register
+- [x] Login
+- [x] Sign Out
 - [ ] Review
 - [ ] Search
 - [ ] Chat 
