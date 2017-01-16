@@ -10,19 +10,22 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import standard.Pages;
 import standard.StringUtils;
 
 public class RegisterHandler extends EventHandlerBase {
 
     private boolean hasErrors = false;
-    private String successPage = "/pages/overview.jsp";
+    
+    private String overviewPage = Pages.overviewPage;
+    private String registerPage = Pages.registerPage;
     
     @Override
     protected String getURL() {
         if (hasErrors) {
-            return "/pages/register.jsp";
+            return registerPage;
         } else {
-            return successPage;
+            return overviewPage;
         }
     }
 
@@ -104,7 +107,7 @@ public class RegisterHandler extends EventHandlerBase {
          if(hasErrors) {
              super.forward(request, response);
          } else {
-            response.sendRedirect(successPage);
+            response.sendRedirect("displayOverview");
          }
          
      }
