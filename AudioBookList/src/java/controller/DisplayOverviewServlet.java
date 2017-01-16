@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import standard.Pages;
 
 public class DisplayOverviewServlet extends HttpServlet {
-    private String overviewPage = Pages.overviewPage;
+    private String overviewPage = Pages.registerConfirmationPage;
     
     public DisplayOverviewServlet() {
         super();
