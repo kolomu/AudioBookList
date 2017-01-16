@@ -18,7 +18,7 @@ public abstract class EventHandlerBase {
     public void forward(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("forward: Using default forward");
         _dispatch(request, response);
-        }
+    }
 
     protected void _dispatch(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("_dispatch: redirecting to " + getURL());
