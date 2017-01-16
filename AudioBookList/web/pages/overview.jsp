@@ -1,5 +1,5 @@
 <%
-    String username = (String) session.getAttribute("username");
+    String username = request.getUserPrincipal().getName();
 %>
 <!DOCTYPE html>
 <html>
