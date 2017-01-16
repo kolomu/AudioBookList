@@ -1,3 +1,6 @@
+<%
+    String username = (String) session.getAttribute("username");
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,6 +21,7 @@
                 <div class="row">
                     <h2>Overview</h2>
                     <hr>
+                    Welcome, <span> <%= username %></span>
                 </div>
             </div>
         </section>
