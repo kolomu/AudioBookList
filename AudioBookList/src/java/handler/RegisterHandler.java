@@ -9,25 +9,29 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import standard.StringUtils;
 
 public class RegisterHandler extends EventHandlerBase {
 
     private boolean hasErrors = false;
-
+    private String successPage = "/pages/overview.jsp";
+    
     @Override
     protected String getURL() {
         if (hasErrors) {
             return "/pages/register.jsp";
         } else {
-            return "/pages/overview.jsp";
+            return successPage;
         }
     }
 
     @Override
     public void process(ServletContext sc, HttpServletRequest request, HttpServletResponse response)
             throws Exception, ServletException, IOException {
-
+        
+        HttpSession session = request.getSession();
+        
         HashMap<String, String> errorMessages = new HashMap<>();
 
         PersonDao dao = new PersonDao();
@@ -84,11 +88,25 @@ public class RegisterHandler extends EventHandlerBase {
 
         if (!hasErrors) {
             dao.create(person);
-            request.setAttribute("user", person);
+            session.setAttribute("user", person); // using session to store user object, for redirect (not forward!)
         } else {
             request.setAttribute("errorMessages", errorMessages);
             request.setAttribute("user", person);
         }
     }
+
+    /* Using PRG Pattern.
+     * Instead of forwarding from doPost() method, we are doing a
+     * redirection to avoid duplicate form submission. (If success)
+     */
+    @Override
+     public void forward(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+         if(hasErrors) {
+             super.forward(request, response);
+         } else {
+            response.sendRedirect(successPage);
+         }
+         
+     }
 
 }
