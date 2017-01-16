@@ -17,7 +17,7 @@ public class RegisterHandler extends EventHandlerBase {
 
     private boolean hasErrors = false;
     
-    private String overviewPage = Pages.overviewPage;
+    private String confirmationPage = Pages.registerConfirmationPage;
     private String registerPage = Pages.registerPage;
     
     @Override
@@ -25,7 +25,7 @@ public class RegisterHandler extends EventHandlerBase {
         if (hasErrors) {
             return registerPage;
         } else {
-            return overviewPage;
+            return confirmationPage;
         }
     }
 
