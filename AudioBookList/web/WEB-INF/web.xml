@@ -8,9 +8,17 @@
             <param-value>handler.RegisterHandler</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>DisplayOverviewServlet</servlet-name>
+        <servlet-class>controller.DisplayOverviewServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MvcController</servlet-name>
         <url-pattern>/MvcController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DisplayOverviewServlet</servlet-name>
+        <url-pattern>/displayOverview</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
