@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <c:choose>
-    <c:when test="${sessionScope.username != null}">
+    <c:when test="${not empty pageContext.request.userPrincipal.name}">
     <nav class="top-bar nav-desktop">
             <div class="wrap">
                 <div class="top-bar-title">
@@ -40,7 +40,7 @@
                     </div>
                     <div class="top-bar-right">
                         <ul class="menu">
-                            <li><a href="<%=request.getContextPath()%>/pages/signout.jsp">Sign out</a></li>
+                            <li><a href="<%=request.getContextPath()%>/MvcController?event=signout">Sign out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                     <div class="top-bar-right">
                         <ul class="menu">
                             <li><a href="<%=request.getContextPath()%>/pages/register.jsp">Register</a></li>
-                            <li><a href="<%=request.getContextPath()%>/pages/login.jsp">Sign In</a></li>
+                            <li><a href="<%=request.getContextPath()%>/pages/protected/login.jsp">Sign In</a></li>
                         </ul>
                     </div>
                 </div>
