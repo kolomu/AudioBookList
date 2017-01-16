@@ -92,6 +92,7 @@ public class RegisterHandler extends EventHandlerBase {
         if (!hasErrors) {
             dao.create(person);
             session.setAttribute("user", person); // using session to store user object, for redirect (not forward!)
+            session.setAttribute("username", username);
         } else {
             request.setAttribute("errorMessages", errorMessages);
             request.setAttribute("user", person);
