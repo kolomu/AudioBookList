@@ -1,17 +1,45 @@
 -- 
 -- RESET
 --
+
+-- DROP FOREIGN KEY CONSTRAINTS
+-- TABLE: person
+ALTER TABLE audiobook DROP FOREIGN KEY fk_person_id;
+ALTER TABLE audiolist DROP FOREIGN KEY fk_list_person_id;
+ALTER TABLE chatentry DROP FOREIGN KEY fk_recipient_id;
+ALTER TABLE chatentry DROP FOREIGN KEY fk_sender_id;
+ALTER TABLE friends DROP FOREIGN KEY fk_friends_friend_id;
+ALTER TABLE friends DROP FOREIGN KEY fk_friends_person_id;
+ALTER TABLE review DROP FOREIGN KEY fk_review_person_id;
+
+-- TABLE: audiobook
+ALTER TABLE audiolist DROP FOREIGN KEY fk_list_audiobook_id;
+ALTER TABLE review DROP FOREIGN KEY fk_review_audiobook_id;
+
+-- TABLE: category 
+ALTER TABLE audiobook DROP FOREIGN KEY fk_category_id;
+
+-- TABLE: lang
+ALTER TABLE audiobook DROP FOREIGN KEY fk_lang_id;
+
+-- TABLE: speaker
+ALTER TABLE audiobook DROP FOREIGN KEY fk_speaker_id;
+
+-- TABLE: speaker
+ALTER TABLE audiobook DROP FOREIGN KEY fk_publisher_id;
+
+-- DROP TABLES
 DROP TABLE IF EXISTS review;
+DROP TABLE IF EXISTS friends;
+DROP TABLE IF EXISTS chatentry;
 DROP TABLE IF EXISTS audiobook;
 DROP TABLE IF EXISTS author;
 DROP TABLE IF EXISTS category;
-DROP TABLE IF EXISTS chatentry;
-DROP TABLE IF EXISTS friends;
 DROP TABLE IF EXISTS person;
 DROP TABLE IF EXISTS lang;
 DROP TABLE IF EXISTS speaker;
 DROP TABLE IF EXISTS publisher;
-
+DROP TABLE IF EXISTS audiolist;
 
 --
 -- Table structures
@@ -48,6 +76,7 @@ CREATE TABLE person (
   password varchar(64) NOT NULL,
   picture varchar(80) DEFAULT NULL,
   active enum('T','F') NOT NULL DEFAULT 'T',
+  rolename varchar(20) NOT NULL DEFAULT 'basicuser',
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
@@ -125,5 +154,16 @@ CREATE TABLE review (
   PRIMARY KEY (id),
   CONSTRAINT fk_review_audiobook_id FOREIGN KEY (audiobook_id) REFERENCES audiobook (id),
   CONSTRAINT fk_review_person_id FOREIGN KEY (person_id) REFERENCES person (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+COMMIT;
+
+CREATE TABLE audiolist (
+  id int(11) unsigned NOT NULL,
+  person_id int(11) unsigned NOT NULL,
+  audiobook_id int(11) unsigned NOT NULL,
+  rating int(11) NOT NULL,
+  PRIMARY KEY (id),
+  CONSTRAINT fk_list_audiobook_id FOREIGN KEY (audiobook_id) REFERENCES audiobook (id),
+  CONSTRAINT fk_list_person_id FOREIGN KEY (person_id) REFERENCES person (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
