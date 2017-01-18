@@ -24,7 +24,7 @@
                                 <input type="text" placeholder="somebody@example.com" name="j_username">
                             </label>
                             <label>Password
-                                <input type="text" placeholder="Password" name="j_password">
+                                <input type="password" placeholder="Password" name="j_password">
                             </label>
                             <input id="show-password" type="checkbox"><label for="show-password">Show password</label>
                             <input type="submit" class="button expanded" value="Login">
