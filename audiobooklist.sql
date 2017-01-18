@@ -98,6 +98,7 @@ CREATE TABLE audiobook (
   duration float DEFAULT NULL,
   lang_id int(11) unsigned NOT NULL,
   rating int(11) DEFAULT NULL,
+  votes int(11) DEFAULT NULL,
   PRIMARY KEY (id),
   CONSTRAINT fk_category_id FOREIGN KEY (category_id) REFERENCES category (id),
   CONSTRAINT fk_lang_id FOREIGN KEY (lang_id) REFERENCES lang (id),
