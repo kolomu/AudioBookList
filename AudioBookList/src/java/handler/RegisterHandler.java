@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import standard.Pages;
+import standard.ServletUtils;
 import standard.StringUtils;
 
 public class RegisterHandler extends EventHandlerBase {
@@ -46,6 +47,12 @@ public class RegisterHandler extends EventHandlerBase {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String termsofuse = request.getParameter("termsofuse");
+        
+        // escape characters
+        username = ServletUtils.filter(username);
+        email = ServletUtils.filter(email);
+        password = ServletUtils.filter(password);
+        termsofuse = ServletUtils.filter(termsofuse);
 
         hasErrors = false;
 
