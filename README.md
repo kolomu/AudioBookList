@@ -47,10 +47,11 @@ I use netbeans with Java EE Support as IDE.
 - [ ] Index (Recent audiobooks, Top rated audiobooks)
 * Entities
 - [x] person  
-- [ ] publisher 
-- [ ] speaker 
-- [ ] lang
-- [ ] category 
-- [ ] author 
-- [ ] audiobook 
-- [ ] review
+- [x] publisher 
+- [x] speaker 
+- [x] lang
+- [x] category 
+- [x] author 
+- [x] audiobook 
+- [x] review
+- [x] audiolist
