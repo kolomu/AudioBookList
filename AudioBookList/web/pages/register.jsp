@@ -50,7 +50,7 @@
                             </label>
                             <p class="help-text" id="usernameHelpText">Spaces are ignored in usernames</p>
                             <label>Password
-                                <input type="text" name="password" placeholder="Password" value="<%=person.getPassword()%>">
+                                <input type="password" name="password" placeholder="Password" value="<%=person.getPassword()%>">
                             </label>
                             <p class="help-text" id="passwordHelpText">Password must have at least 6 characters</p>
                             <label>Email
