@@ -34,12 +34,14 @@
                                     <li><a href="#">More Categories</a></li>
                                 </ul>
                             </li>
-                            <li><input type="search" placeholder="Search"></li>
-                            <li><button type="button" class="button">Search</button></li>
+                            <li><a href="#">My List</a></li>
+                            <li><a href="#">Profile</a></li>
                         </ul>
                     </div>
                     <div class="top-bar-right">
                         <ul class="menu">
+                            <li><input type="search" placeholder="Search"></li>
+                            <li><button type="button" class="button">Search</button></li>
                             <li><a href="<%=request.getContextPath()%>/MvcController?event=signout">Sign out</a></li>
                         </ul>
                     </div>
@@ -80,12 +82,12 @@
                                     <li><a href="#">More Categories</a></li>
                                 </ul>
                             </li>
-                            <li><input type="search" placeholder="Search"></li>
-                            <li><button type="button" class="button">Search</button></li>
                         </ul>
                     </div>
                     <div class="top-bar-right">
                         <ul class="menu">
+                            <li><input type="search" placeholder="Search"></li>
+                            <li><button type="button" class="button">Search</button></li>
                             <li><a href="<%=request.getContextPath()%>/pages/register.jsp">Register</a></li>
                             <li><a href="<%=request.getContextPath()%>/pages/protected/login.jsp">Sign In</a></li>
                         </ul>
