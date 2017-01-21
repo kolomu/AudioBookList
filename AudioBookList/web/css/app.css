@@ -8,6 +8,25 @@ body {
     margin: 0 auto;
 }
 
+
+/* *****************************************************************
+STAR RATING
+****************************************************************** */
+span.stars, span.stars span {
+    display: inline-block;
+    background: url("../img/stars.png") 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+
+.votes {
+    margin-left: 5px;
+    margin-top: -5px;
+}
 /* *****************************************************************
 NAVBAR DESKTOP
 ****************************************************************** */
@@ -61,11 +80,33 @@ MAIN SECTION
 ****************************************************************** */
 .main {
     /* SPACING */
-    padding: 40px 0px;
+    padding: 25px 0px;
 }
 
 .main h2 {
     color: #080921;
+}
+
+.main h3 {
+    font-size: 1.3rem;
+}
+
+.audiobookBox {
+    border:1px solid black;
+    background-color: rgba(255,255,255,0.25);
+}
+
+.rating {
+    margin: 0px auto;
+    display: table;
+}
+
+#recentAudioBooks {
+    margin-top: 20px;
+}
+
+hr {
+    margin:0.75rem auto
 }
 
 /* *****************************************************************
