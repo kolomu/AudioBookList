@@ -24,6 +24,7 @@ DROP TABLE IF EXISTS lang;
 DROP TABLE IF EXISTS speaker;
 DROP TABLE IF EXISTS publisher;
 DROP TABLE IF EXISTS audiolist;
+DROP TABLE IF EXISTS joinAudiobookSpeaker;
 */
 
 
@@ -40,7 +41,6 @@ CREATE TABLE author (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
 
-
 CREATE TABLE category (
   id int(11) unsigned NOT NULL AUTO_INCREMENT,
   name varchar(45) NOT NULL,
@@ -48,14 +48,12 @@ CREATE TABLE category (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
 
-
 CREATE TABLE lang (
   id int(11) unsigned NOT NULL AUTO_INCREMENT,
   name varchar(45) NOT NULL,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
-
 
 CREATE TABLE person (
   id int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -69,7 +67,6 @@ CREATE TABLE person (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
 
-
 CREATE TABLE speaker (
   id int(10) unsigned NOT NULL AUTO_INCREMENT,
   firstname varchar(45) NOT NULL,
@@ -78,6 +75,14 @@ CREATE TABLE speaker (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
 
+CREATE TABLE joinAudiobookSpeaker (
+  audiobook_id int(11) unsigned NOT NULL,
+  speaker_id int(11) unsigned NOT NULL,
+  PRIMARY KEY (audiobook_id, speaker_id),
+  CONSTRAINT fk_audiobookspeaker_audiobook FOREIGN KEY (audiobook_id) REFERENCES audiobook (id) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT fk_audiobookspeaker_speaker FOREIGN KEY (speaker_id) REFERENCES speaker (id) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+COMMIT;
 
 CREATE TABLE publisher (
   id int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -86,13 +91,11 @@ CREATE TABLE publisher (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
 
-
 CREATE TABLE audiobook (
   id int(11) unsigned NOT NULL AUTO_INCREMENT,
   person_id int(11) unsigned DEFAULT NULL,
   author_id int(11) unsigned NOT NULL,
-  title varchar(45) NOT NULL,
-  speaker_id int(11) unsigned NOT NULL,
+  title varchar(45) NOT NULL
   publisher_id int(11) unsigned DEFAULT NULL,
   published date DEFAULT NULL,
   description varchar(400) DEFAULT NULL,
@@ -110,7 +113,6 @@ CREATE TABLE audiobook (
   CONSTRAINT fk_speaker_id FOREIGN KEY (speaker_id) REFERENCES speaker (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
-
 
 CREATE TABLE review (
   id int(11) unsigned NOT NULL,
@@ -134,8 +136,6 @@ CREATE TABLE audiolist (
   CONSTRAINT fk_list_person_id FOREIGN KEY (person_id) REFERENCES person (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
-
-
 
 --
 -- INSERT Statements
@@ -186,3 +186,8 @@ COMMIT;
 
 INSERT INTO audiobook (id, person_id, author_id, title, speaker_id, publisher_id, published, category_id, duration, lang_id, rating, votes, description) 
 VALUES (null, null, 1, "The Whistler", 1, 2,'2016-10-25', 2, 790, 1, 500, 100, "We expect our judges to be honest and wise. Their integrity and impartiality are the bedrock of the entire judicial system. We trust them to ensure fair trials, to protect the rights of all litigants, to punish those who do wrong, and to oversee the orderly and efficient flow of justice. But what happens when a judge bends the law or takes a bribe?");
+COMMIT;
+
+INSERT INTO joinAudiobookSpeaker (audiobook_id, speaker_id) values (1, 1);
+INSERT INTO joinAudiobookSpeaker (audiobook_id, speaker_id) values (1, 2);
+COMMIT;
