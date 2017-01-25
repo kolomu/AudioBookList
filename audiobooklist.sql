@@ -101,10 +101,11 @@ CREATE TABLE audiobook (
 COMMIT;
 
 CREATE TABLE vote (
+  id int(11) unsigned NOT NULL AUTO_INCREMENT,
   person_id int(11) unsigned NOT NULL,
   audiobook_id int(11) unsigned NOT NULL,
   rating int(11) DEFAULT NULL,
-  PRIMARY KEY (person_id, audiobook_id),
+  PRIMARY KEY (id),
   CONSTRAINT fk_vote_person FOREIGN KEY (person_id) REFERENCES person (id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT fk_vote_audiobook FOREIGN KEY (audiobook_id) REFERENCES audiobook (id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -200,6 +201,6 @@ INSERT INTO person (id, username, email, password, picture) values (null, "test"
 INSERT INTO person (id, username, email, password, picture) values (null, "test2", "test2@test.de", "123456", null);
 COMMIT;
 
-INSERT INTO vote (person_id, audiobook_id, rating) values (1, 1, 5);
-INSERT INTO vote (person_id, audiobook_id, rating) values (2, 1, 5);
+INSERT INTO vote (id, person_id, audiobook_id, rating) values (null, 1, 1, 5);
+INSERT INTO vote (id, person_id, audiobook_id, rating) values (null, 2, 1, 5);
 COMMIT;
